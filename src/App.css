@@ -1,8 +1,4 @@
-.App {
-  text-align: center;
-}
-
-.App-header {
+#root {
   background-color: #F9D9f1;
   min-height: 100vh;
   display: flex;
@@ -12,8 +8,5 @@
   font-size: calc(10px + 2vmin);
   color: #27789A;
   font-family: 'Merienda', cursive;
-}
-
-.App-link {
-  color: #61dafb;
+  text-align: center;
 }

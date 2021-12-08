@@ -1,14 +1,13 @@
 import './App.css';
+import { Container } from '@mui/material';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          BUBBLEGUM SHOP
-        </p>
-      </header>
-    </div>
+    <Container>
+      <p>
+        BUBBLEGUM SHOP
+      </p>
+    </Container>
   );
 }
 
