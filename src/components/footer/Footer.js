@@ -1,7 +1,8 @@
-import { Copyright, MailTwoTone } from "@mui/icons-material";
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { Typography, IconButton, AppBar, Toolbar } from "@mui/material";
+import { Copyright } from "@mui/icons-material";
+import MailOutlineTwoToneIcon from '@mui/icons-material/MailOutlineTwoTone';
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
             <Copyright /> Bubblegum 2021
           </Typography>
           <IconButton >
-            <MailTwoTone />
+            <MailOutlineTwoToneIcon />
           </IconButton>
         </Toolbar>
       </AppBar>

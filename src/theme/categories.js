@@ -1,15 +1,15 @@
 import { createTheme } from '@mui/material/styles';
 
-const footer = createTheme({
+const categories = createTheme({
   palette: {
     primary: {
-      main: '#0f2a36',
+      main: '#27789A',
     },
   },
   typography: {
     fontFamily: 'Dosis',
-    fontSize: 10,
+    fontSize: 18,
   },
 });
 
-export default footer
+export default categories
