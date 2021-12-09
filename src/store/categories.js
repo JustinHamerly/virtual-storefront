@@ -13,15 +13,16 @@ function categoryReducer(state = initialState, action) {
 
   switch(type) {
     case 'CHANGE_CATEGORY':
-
+      
+      let activeCategory = state.active;
       let categories = state.categories.map(category => {
         if(category.normalized === payload){
+          activeCategory = category.normalized;
           return {...category, active: true}
         }else{
           return {...category, active: false}
         }
       });
-      let activeCategory = state.active;
       
       return { categories, activeCategory }
 

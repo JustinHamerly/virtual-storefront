@@ -1,43 +1,19 @@
 import './App.css';
 import Header from './components/header/Header';
-import Footer from './components/footer/Footer'
-import { Container, Grid, Card, Button } from '@mui/material';
+import Footer from './components/footer/Footer';
+import { Container } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
+import Categories from './components/storefront/Categories';
 import menuTheme from './theme/menu.js'
 import { connect } from 'react-redux';
 
 function App(props) {
-  console.log(props);
   return (
     <Container>
       <ThemeProvider theme={menuTheme}>
-        <Header/>
-          <div className="App">
-            <Grid sx={{ margin: '50px 0px 0px 0px',}} justifyContent="center" container spacing={1}>
-              {props.category.categories.map((category, idx) => {
-                if(!category.active){
-                  return (
-                    <Grid key={idx} item>
-                      <Card>
-                        <Button onClick={() => {
-                          props.active(category.normalized);
-                        }}>Shop {category.name}!</Button>
-                      </Card>
-                    </Grid >
-                  )
-                }else{
-                  return(
-                    <Grid key={idx} item>
-                      <Card>
-                        <Button disabled>{category.name}</Button>
-                      </Card>
-                    </Grid >
-                  )
-                }
-              })}
-            </Grid>
-          </div>
-        <Footer/>
+        <Header />
+        <Categories current={props} />
+        <Footer />
       </ThemeProvider>
     </Container>
   );
