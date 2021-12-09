@@ -1,9 +1,8 @@
 import { Grid, Card, Button } from "@mui/material";
 
 function Categories(props){
-  console.log(props);
   return(
-    <Grid sx={{ margin: '50px 0px 0px 0px',}} justifyContent="center" container spacing={1}>
+    <Grid sx={{ margin: '50px 0px',}} justifyContent="center" container spacing={1}>
     {props.current.category.categories.map((category, idx) => {
       if(!category.active){
         return (
