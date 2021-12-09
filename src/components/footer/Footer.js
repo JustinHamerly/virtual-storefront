@@ -10,9 +10,9 @@ export default function Footer() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Copyright /> Justin Hamerly
+            <Copyright /> Bubblegum 2021
           </Typography>
-          <IconButton>
+          <IconButton >
             <MailTwoTone />
           </IconButton>
         </Toolbar>

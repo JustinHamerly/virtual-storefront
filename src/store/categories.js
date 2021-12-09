@@ -1,10 +1,11 @@
 let initialState= {
   categories: [
-    { normalized: 'classic', name: 'All the Classics', description: 'the most classic of flavors', active: true},
+    { normalized: 'all', name: 'All Flavors', description: 'the entire collection', active: true},
+    { normalized: 'classic', name: 'The Classics', description: 'the most classic of flavors', active: false},
     { normalized: 'unique', name: 'Strange Chews', description: 'flavors for the brave and adventurous', active: false},
     { normalized: 'seasonal', name: 'Seasonal', description: 'limited run and seasonal flavors', active:false},
   ],
-  active: 'classic',
+  active: 'all',
 };
 
 function categoryReducer(state = initialState, action) {

@@ -1,18 +1,23 @@
 import './App.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-import { Container } from '@mui/material';
+import { Container, Box } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import Categories from './components/storefront/Categories';
-import menuTheme from './theme/menu.js'
+import header from './theme/header.js';
+import footer from './theme/footer.js';
 import { connect } from 'react-redux';
 
 function App(props) {
   return (
-    <Container>
-      <ThemeProvider theme={menuTheme}>
+    <Container fixed sx={{ width: '2000px' }}>
+      <ThemeProvider theme={header}>
         <Header />
+      </ThemeProvider>
+      <Box sx={{ bgcolor: '#FEF0FF', height: '600px' }}>
         <Categories current={props} />
+      </Box>
+      <ThemeProvider theme={footer}>
         <Footer />
       </ThemeProvider>
     </Container>
