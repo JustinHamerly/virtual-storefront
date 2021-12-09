@@ -25,8 +25,6 @@ function categoryReducer(state = initialState, action) {
       
       return { categories, activeCategory }
 
-    case 'RESET_CATEGORY':
-      return initialState;
     default:
       return state;
   }
