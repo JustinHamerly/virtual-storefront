@@ -1,19 +1,19 @@
 import { Grid, Card } from '@mui/material';
 
 function Products(props){
+  console.log(props);
   return(
     <Grid sx={{ padding: '25px 0px',}} justifyContent="center" container spacing={1}>
-      {props.current.category.categories.map((product, idx) => {
-        if(product.categoryID){
-          return (
-            <Grid key={idx} item>
-              <Card>
-                {product.name}
-              </Card>
-            </Grid >
-          )
-        }
-      })}
+      {props.current.product.displayedProducts.map((product, idx) => {
+        return (
+          <Grid key={idx} item>
+            <Card>
+              {product.name}
+            </Card>
+          </Grid >
+        )
+       })
+      }
     </Grid>
   )
 }

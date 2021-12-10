@@ -4,6 +4,7 @@ import Footer from './components/footer/Footer';
 import { Container, Box } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import Categories from './components/storefront/Categories';
+import Products from './components/storefront/Products';
 import header from './theme/header.js';
 import footer from './theme/footer.js';
 import categories from './theme/categories.js';
@@ -19,6 +20,7 @@ function App(props) {
         <ThemeProvider theme={categories} >
           <Categories current={props} />
         </ThemeProvider>
+        <Products current={props} />
       </Box>
       <ThemeProvider theme={footer}>
         <Footer />
@@ -29,14 +31,17 @@ function App(props) {
 
 //layers the state to props
 const mapStateToProps = state => {
+  console.log(state);
   return {
     category: state.category,
+    product: state.product,
   }
 }
 
 // this allows actions to be pumped through our reducer.
 const mapDispatchToProps = dispatch => ({
-  active: (normalized) => dispatch({type: 'CHANGE_CATEGORY', payload: normalized})
+  changeCategory: (activeCategory) => dispatch({type: 'CHANGE_CATEGORY', payload: activeCategory}),
+  changeProducts: (category) => dispatch({type: 'CHANGE_PRODUCTS', payload: category}),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

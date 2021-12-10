@@ -9,7 +9,8 @@ function Categories(props){
           <Grid key={idx} item>
             <Card>
               <Button sx={{ bgcolor: '#FFFFFF', height: '50px', width: '150px' }} onClick={() => {
-                props.current.active(category.normalized);
+                props.current.changeCategory(category.normalized);
+                props.current.changeProducts(category.normalized);
               }}>{category.name}</Button>
             </Card>
           </Grid >
