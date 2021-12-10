@@ -37,7 +37,6 @@ function App(props) {
 
 //layers the state to props
 const mapStateToProps = state => {
-  console.log(state);
   return {
     category: state.category,
     product: state.product,

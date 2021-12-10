@@ -1,5 +1,3 @@
-import { StarTwoTone } from "@mui/icons-material";
-
 let initialState= {
   products: [
     { name: 'mint', category: 'classic', description: 'for the freshest breath', price: 10, inventory: 180 },
