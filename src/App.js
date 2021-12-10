@@ -15,7 +15,7 @@ function App(props) {
       <ThemeProvider theme={header}>
         <Header />
       </ThemeProvider>
-      <Box sx={{ bgcolor: '#FEF0FF', height: '600px' }}>
+      <Box sx={{ bgcolor: '#FEF0FF', height: '800px' }}>
         <ThemeProvider theme={categories} >
           <Categories current={props} />
         </ThemeProvider>
