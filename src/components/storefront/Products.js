@@ -1,15 +1,14 @@
-import { Grid, Card } from '@mui/material';
+import { Grid } from '@mui/material';
+import Product from '../products/Product';
 
 function Products(props){
-  console.log(props);
+  console.log(props); 
   return(
-    <Grid sx={{ padding: '25px 0px',}} justifyContent="center" container spacing={1}>
+    <Grid justifyContent="center" alignItems="center" height="600px" container spacing={1}>
       {props.current.product.displayedProducts.map((product, idx) => {
         return (
           <Grid key={idx} item>
-            <Card>
-              {product.name}
-            </Card>
+            <Product product={product} />
           </Grid >
         )
        })

@@ -7,8 +7,12 @@ const categories = createTheme({
     },
   },
   typography: {
+    button:{
+      fontFamily: 'Merienda',
+      fontSize: 20,
+    },
     fontFamily: 'Dosis',
-    fontSize: 18,
+    fontSize: 30,
   },
 });
 
