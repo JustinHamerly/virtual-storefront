@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
-const categories = createTheme({
+const products = createTheme({
   palette: {
     primary: {
       main: '#27789A',
@@ -8,12 +8,16 @@ const categories = createTheme({
   },
   typography: {
     button:{
-      fontFamily: 'Merienda',
+      fontFamily: 'Dosis',
       fontSize: 20,
     },
     fontFamily: 'Dosis',
-    fontSize: 30,
+    fontSize: 15,
+    variant:{
+      h6: { fontSize: 10 }
+    }
   },
+
 });
 
-export default categories
+export default products;

@@ -1,13 +1,17 @@
 import './App.css';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
 import { Container, Box } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
+
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
 import Categories from './components/storefront/Categories';
 import Products from './components/storefront/Products';
-import header from './theme/header.js';
-import footer from './theme/footer.js';
-import categories from './theme/categories.js';
+
+import header from './theme/headerTheme.js';
+import footer from './theme/footerTheme.js';
+import categories from './theme/categoriesTheme.js';
+import products from './theme/productsTheme.js';
+
 import { connect } from 'react-redux';
 
 function App(props) {
@@ -19,6 +23,8 @@ function App(props) {
       <Box sx={{ bgcolor: '#FEF0FF', height: '800px' }}>
         <ThemeProvider theme={categories} >
           <Categories current={props} />
+        </ThemeProvider>
+        <ThemeProvider theme={products} >
           <Products current={props} />
         </ThemeProvider>
       </Box>
