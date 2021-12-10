@@ -2,14 +2,15 @@ import { Grid, Card, Button } from "@mui/material";
 
 function Categories(props){
   return(
-    <Grid sx={{ margin: '50px 0px',}} justifyContent="center" container spacing={1}>
+    <Grid sx={{ padding: '25px 0px',}} justifyContent="center" container spacing={1}>
     {props.current.category.categories.map((category, idx) => {
       if(!category.active){
         return (
           <Grid key={idx} item>
             <Card>
-              <Button onClick={() => {
-                props.current.active(category.normalized);
+              <Button sx={{ bgcolor: '#FFFFFF', height: '50px', width: '200px' }} onClick={() => {
+                props.current.changeCategory(category.normalized);
+                props.current.changeProducts(category.normalized);
               }}>{category.name}</Button>
             </Card>
           </Grid >
@@ -18,7 +19,7 @@ function Categories(props){
         return(
           <Grid key={idx} item>
             <Card>
-              <Button disabled>{category.name}</Button>
+              <Button disabled sx={{ color: '#FFFFFF', bgcolor: '#bcdeec', height: '50px', width: '200px' }}>{category.name}</Button>
             </Card>
           </Grid >
         )

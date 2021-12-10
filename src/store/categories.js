@@ -1,8 +1,9 @@
 let initialState= {
   categories: [
-    { normalized: 'classic', name: 'All the Classics', description: 'the most classic of flavors', active: true},
-    { normalized: 'unique', name: 'Strange Chews', description: 'flavors for the brave and adventurous', active: false},
+    { normalized: 'classic', name: 'The Classics', description: 'the most classic of flavors', active: true},
+    { normalized: 'unique', name: 'Unique Chews', description: 'flavors for the brave and adventurous', active: false},
     { normalized: 'seasonal', name: 'Seasonal', description: 'limited run and seasonal flavors', active:false},
+    { normalized: 'apparel', name: 'Apparel', description: 'Bubblegum Merch', active:false},
   ],
   active: 'classic',
 };
