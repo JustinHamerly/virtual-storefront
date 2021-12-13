@@ -1,4 +1,4 @@
-import { Grid, Card, Button } from "@mui/material";
+import { Grid, Card, Button, Typography } from "@mui/material";
 
 function Categories(props){
   return(
@@ -11,7 +11,7 @@ function Categories(props){
               <Button sx={{ bgcolor: '#FFFFFF', height: '50px', width: '200px' }} onClick={() => {
                 props.current.changeCategory(category.normalized);
                 props.current.changeProducts(category.normalized);
-              }}>{category.name}</Button>
+              }}><Typography>{category.name}</Typography></Button>
             </Card>
           </Grid >
         )
@@ -19,7 +19,7 @@ function Categories(props){
         return(
           <Grid key={idx} item>
             <Card>
-              <Button disabled sx={{ color: '#FFFFFF', bgcolor: '#bcdeec', height: '50px', width: '200px' }}>{category.name}</Button>
+              <Button disabled sx={{ color: 'primary.active', bgcolor: '#0f2a36', height: '50px', width: '200px' }}><Typography sx={{ color: 'primary.active'}}>{category.name}</Typography></Button>
             </Card>
           </Grid >
         )

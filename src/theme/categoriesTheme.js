@@ -4,13 +4,12 @@ const categories = createTheme({
   palette: {
     primary: {
       main: '#27789A',
+      active: '#FFFFFF'
     },
   },
   typography: {
-    button:{
-      fontFamily: 'Merienda',
-      fontSize: 20,
-    },
+    fontFamily: 'Merienda',
+    fontSize: 15,
   },
 });
 
